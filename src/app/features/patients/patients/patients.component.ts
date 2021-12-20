@@ -1,17 +1,23 @@
-import { Component, OnInit, ChangeDetectionStrategy } from "@angular/core";
+import {ChangeDetectionStrategy, Component} from "@angular/core";
 
-import { ROUTE_ANIMATIONS_ELEMENTS } from "../../../core/core.module";
+import {ROUTE_ANIMATIONS_ELEMENTS} from "../../../core/core.module";
+import {PatientsDataService} from "../../../core/patients/patients-data.service";
 
 @Component({
-  selector: "st-patients",
-  templateUrl: "./patients.component.html",
-  styleUrls: ["./patients.component.scss"],
-  changeDetection: ChangeDetectionStrategy.OnPush
+    selector: "st-patients",
+    templateUrl: "./patients.component.html",
+    styleUrls: ["./patients.component.scss"],
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class PatientsComponent implements OnInit {
-  routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+export class PatientsComponent {
+    routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
 
-  constructor() {}
+    constructor(private readonly dataService: PatientsDataService) {
+    }
 
-  ngOnInit() {}
+    loadPatientsList() {
+        this.dataService.getPatients().subscribe(patientsList => {
+            console.log(patientsList);
+        })
+    }
 }

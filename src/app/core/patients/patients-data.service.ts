@@ -4,6 +4,7 @@ import {Params} from '@angular/router';
 import {environment} from '../../../environments/environment';
 import {Patient} from '../../shared/models/patient.model';
 import {Observable} from 'rxjs';
+import {pluck} from "rxjs/operators";
 
 @Injectable({
   providedIn: 'root'
@@ -14,6 +15,6 @@ export class PatientsDataService {
   constructor(private readonly httpClient: HttpClient) { }
 
   getPatients(params?: Params): Observable<Patient[]> {
-    return this.httpClient.get<Patient[]>(this.apiUrl, {params: params})
+    return this.httpClient.get<Patient[]>(this.apiUrl, {params: params}).pipe(pluck('patient'));
   }
 }

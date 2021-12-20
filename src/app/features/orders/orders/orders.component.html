@@ -2,7 +2,7 @@
   <div rtl>
     <h1 class="main-heading">{{ 'stms.orders.title' | translate }}</h1>
     <div class="actions">
-      <a mat-raised-button class="actions-main" color="primary">
+      <a mat-raised-button class="actions-main" color="primary" (click)="loadOrdersList()">
         {{ 'stms.orders.get-orders' | translate }}
       </a>
       <!--
