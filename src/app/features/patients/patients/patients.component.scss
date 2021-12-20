@@ -1,1 +1,18 @@
 @import "../../../../styles-variables";
+
+.actions {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+mat-spinner {
+  margin: 0 8px;
+}
+
+.table {
+  width: 100%;
+}
+
+.star-icon {
+  color: lightgrey;
+}
