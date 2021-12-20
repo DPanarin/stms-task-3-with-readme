@@ -11,6 +11,7 @@ export const environment = {
   production: false,
   test: false,
   i18nPrefix: "",
+  baseUrl: "https://api.mocki.io/v2",
   versions: {
     app: packageJson.version,
     angular: packageJson.dependencies["@angular/core"],
