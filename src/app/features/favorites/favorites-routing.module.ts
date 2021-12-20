@@ -6,7 +6,7 @@ const routes: Routes = [
   {
     path: "",
     component: FavoritesComponent,
-    data: { title: "stms.menu.orders" }
+    data: { title: "stms.menu.favorites" }
   }
 ];
 
