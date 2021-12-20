@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="40bc8bf7-bd76-42ec-ba42-d82cec4a738d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-routing.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/features/favorites/favorites-routing.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/favorites/favorites-routing.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app-root/app-root.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app-root/app-root.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/favorites/favorites.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/favorites/favorites.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/favorites/favorites/favorites.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/favorites/favorites/favorites.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/i18n/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/assets/i18n/en.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,18 +67,42 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1640024476546</updated>
-      <workItem from="1640024477573" duration="2110000" />
+      <workItem from="1640024477573" duration="3328000" />
     </task>
+    <task id="LOCAL-00001" summary="added the favorites route with appropriate module">
+      <created>1640026727794</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1640026727794</updated>
+    </task>
+    <task id="LOCAL-00002" summary="updated gitignore">
+      <created>1640026789324</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1640026789324</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="added the favorites route with appropriate module" />
+    <MESSAGE value="updated gitignore" />
+    <option name="LAST_COMMIT_MESSAGE" value="updated gitignore" />
   </component>
   <component name="WindowStateProjectService">
     <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1640024733152">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>
     <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1640024733152" />
+    <state x="156" y="82" width="1291" height="888" key="CommitChangelistDialog2" timestamp="1640026788998">
+      <screen x="0" y="0" width="1920" height="1160" />
+    </state>
+    <state x="156" y="82" width="1291" height="888" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1640026788998" />
     <state x="798" y="478" key="Github.ShareDialog" timestamp="1640026243038">
       <screen x="0" y="0" width="1920" height="1160" />
     </state>

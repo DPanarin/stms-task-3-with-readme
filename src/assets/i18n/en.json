@@ -31,5 +31,7 @@
   "stms.patients.get-patients": "Get patients",
 
   "stms.orders.title": "Orders",
-  "stms.orders.get-orders": "Get orders"
+  "stms.orders.get-orders": "Get orders",
+
+  "stms.favorites.title": "Favorites"
 }
