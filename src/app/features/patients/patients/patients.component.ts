@@ -5,6 +5,8 @@ import {PatientsDataService} from "../../../core/patients/patients-data.service"
 import {BehaviorSubject} from "rxjs";
 import {Patient} from "../../../shared/models/patient.model";
 import {finalize} from "rxjs/operators";
+import {FavoritesService} from "../../../core/favorites/favorites.service";
+import {FavoriteItemType} from "../../../core/favorites/favorite-item-type.enum";
 
 @Component({
     selector: "st-patients",
@@ -19,7 +21,7 @@ export class PatientsComponent {
     readonly displayedColumns: string[] = ['fullName', 'birthDate', 'code', 'defaultId', 'isFavorite'];
     readonly isLoading$ = new BehaviorSubject<boolean>(false);
 
-    constructor(private readonly dataService: PatientsDataService) {
+    constructor(private readonly dataService: PatientsDataService, private readonly favoritesService: FavoritesService) {
     }
 
     loadPatientsList() {
@@ -32,6 +34,10 @@ export class PatientsComponent {
     }
 
     isFavoritePatient(patient: Patient) {
-        return false;
+        return this.favoritesService.isFavorite({id: patient.defaultId, type: FavoriteItemType.Patient});
+    }
+
+    changePatientStatus(patient: Patient) {
+        this.favoritesService.changeStatus({id: patient.defaultId, type: FavoriteItemType.Patient});
     }
 }

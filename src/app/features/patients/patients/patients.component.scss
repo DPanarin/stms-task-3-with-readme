@@ -15,4 +15,8 @@ mat-spinner {
 
 .star-icon {
   color: lightgrey;
+
+  &.favorite {
+    color: #006064;
+  }
 }

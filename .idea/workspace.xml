@@ -1,11 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="40bc8bf7-bd76-42ec-ba42-d82cec4a738d" name="Default Changelist" comment="provided base structure of favorites component">
+      <change afterPath="$PROJECT_DIR$/src/app/core/favorites/favorite-item-type.enum.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/favorites/favorite-item.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/favorites/favorites.service.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/core/favorites/favorites.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/orders/orders-data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/orders/orders-data.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/core/patients/patients-data.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/core/patients/patients-data.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/features/patients/patients/patients.component.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,6 +30,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -32,7 +40,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="ts.external.directory.path" value="C:\Users\panar\WebstormProjects\stms-task-3-with-readme\node_modules\typescript\lib" />
+    <property name="ts.external.directory.path" value="C:\Users\LW001\WebstormProjects\stms-task-3-with-readme\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager" selected="npm.Angular CLI Server">
@@ -67,6 +75,7 @@
       <option name="presentableId" value="Default" />
       <updated>1640024476546</updated>
       <workItem from="1640024477573" duration="5968000" />
+      <workItem from="1640031979379" duration="9507000" />
     </task>
     <task id="LOCAL-00001" summary="added the favorites route with appropriate module">
       <created>1640026727794</created>
@@ -96,7 +105,21 @@
       <option name="project" value="LOCAL" />
       <updated>1640030243198</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="provided data services cals for orders and patients components">
+      <created>1640034616239</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1640034616239</updated>
+    </task>
+    <task id="LOCAL-00006" summary="added table with list of patients">
+      <created>1640039401016</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1640039401016</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,48 +130,8 @@
     <MESSAGE value="updated gitignore" />
     <MESSAGE value="provided base structure of favorites component" />
     <MESSAGE value="provided data services templates for patients and orders" />
-    <option name="LAST_COMMIT_MESSAGE" value="provided data services templates for patients and orders" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1640024733152">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="414" y="235" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1640024733152" />
-    <state x="156" y="82" width="1291" height="888" key="CommitChangelistDialog2" timestamp="1640030242801">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="156" y="82" width="1291" height="888" key="CommitChangelistDialog2/0.0.1920.1160@0.0.1920.1160" timestamp="1640030242801" />
-    <state x="798" y="478" key="Github.ShareDialog" timestamp="1640026243038">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="798" y="478" key="Github.ShareDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1640026243038" />
-    <state x="716" y="279" key="Github.UntrackedFilesDialog" timestamp="1640026265885">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="716" y="279" key="Github.UntrackedFilesDialog/0.0.1920.1160@0.0.1920.1160" timestamp="1640026265885" />
-    <state width="1899" height="321" key="GridCell.Tab.0.bottom" timestamp="1640024769738">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.bottom/0.0.1920.1160@0.0.1920.1160" timestamp="1640024769738" />
-    <state width="1899" height="321" key="GridCell.Tab.0.center" timestamp="1640024769738">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.center/0.0.1920.1160@0.0.1920.1160" timestamp="1640024769738" />
-    <state width="1899" height="321" key="GridCell.Tab.0.left" timestamp="1640024769738">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.left/0.0.1920.1160@0.0.1920.1160" timestamp="1640024769738" />
-    <state width="1899" height="321" key="GridCell.Tab.0.right" timestamp="1640024769738">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state width="1899" height="321" key="GridCell.Tab.0.right/0.0.1920.1160@0.0.1920.1160" timestamp="1640024769738" />
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2" timestamp="1640030248164">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="552" y="313" key="Vcs.Push.Dialog.v2/0.0.1920.1160@0.0.1920.1160" timestamp="1640030248164" />
-    <state x="823" y="465" width="348" height="298" key="org.angular.cli.generate" timestamp="1640029903900">
-      <screen x="0" y="0" width="1920" height="1160" />
-    </state>
-    <state x="823" y="465" width="348" height="298" key="org.angular.cli.generate/0.0.1920.1160@0.0.1920.1160" timestamp="1640029903900" />
+    <MESSAGE value="provided data services cals for orders and patients components" />
+    <MESSAGE value="added table with list of patients" />
+    <option name="LAST_COMMIT_MESSAGE" value="added table with list of patients" />
   </component>
 </project>
