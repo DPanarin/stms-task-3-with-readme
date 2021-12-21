@@ -38,3 +38,34 @@ mat-card {
     left: 5px;
   }
 }
+
+.actions {
+  display: flex;
+  margin-bottom: 16px;
+}
+
+mat-spinner {
+  margin: 0 8px;
+}
+
+.table {
+  width: 100%;
+}
+
+.star-icon {
+  color: lightgrey;
+
+  &.favorite {
+    color: #006064;
+  }
+}
+
+.search-input {
+  margin: 8px 0;
+  border-radius: 4px;
+  border-color: lightgrey;
+  min-width: 220px;
+  &:focus {
+    border-color: #006064;
+  }
+}

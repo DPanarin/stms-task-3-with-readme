@@ -2,11 +2,13 @@ import {ChangeDetectionStrategy, Component} from "@angular/core";
 
 import {ROUTE_ANIMATIONS_ELEMENTS} from "../../../core/core.module";
 import {PatientsDataService} from "../../../core/patients/patients-data.service";
-import {BehaviorSubject} from "rxjs";
+import {BehaviorSubject, combineLatest} from "rxjs";
 import {Patient} from "../../../shared/models/patient.model";
-import {finalize} from "rxjs/operators";
+import {finalize, map, startWith} from "rxjs/operators";
 import {FavoritesService} from "../../../core/favorites/favorites.service";
 import {FavoriteItemType} from "../../../core/favorites/favorite-item-type.enum";
+import {FormBuilder, FormControl} from "@angular/forms";
+import {SearchService} from "../../../core/search/search.service";
 
 @Component({
     selector: "st-patients",
@@ -16,12 +18,22 @@ import {FavoriteItemType} from "../../../core/favorites/favorite-item-type.enum"
 })
 export class PatientsComponent {
     routeAnimationsElements = ROUTE_ANIMATIONS_ELEMENTS;
+    searchControl: FormControl = this.builder.control('');
 
-    readonly patientsList$ = new BehaviorSubject<Patient[]>([]);
     readonly displayedColumns: string[] = ['fullName', 'birthDate', 'code', 'defaultId', 'isFavorite'];
     readonly isLoading$ = new BehaviorSubject<boolean>(false);
+    readonly patientsList$ = new BehaviorSubject<Patient[]>([]);
+    readonly filteredPatientList$ = combineLatest([
+        this.patientsList$,
+        this.searchControl.valueChanges.pipe(startWith('' as string))
+    ]).pipe(map(([list, searchPhrase]) => {
+        return this.searchService.search<Patient>(list, searchPhrase, 'firstName')
+    }));
 
-    constructor(private readonly dataService: PatientsDataService, private readonly favoritesService: FavoritesService) {
+    constructor(private readonly dataService: PatientsDataService,
+                private readonly favoritesService: FavoritesService,
+                private readonly builder: FormBuilder,
+                private readonly searchService: SearchService) {
     }
 
     loadPatientsList() {

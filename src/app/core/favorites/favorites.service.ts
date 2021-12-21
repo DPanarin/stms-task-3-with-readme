@@ -41,4 +41,8 @@ export class FavoritesService {
       }
     }
   }
+
+  getFavorites() {
+    return this.patients;
+  }
 }
