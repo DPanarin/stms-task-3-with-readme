@@ -44,7 +44,6 @@ export class OrdersComponent {
             .pipe(finalize(() => this.isLoading$.next(false)))
             .subscribe(ordersList => {
                 this.ordersList$.next(ordersList);
-                console.log(ordersList);
             })
     }
 
