@@ -4,6 +4,7 @@ import {combineLatest} from "rxjs";
 import {PatientsDataService} from "../../../core/patients/patients-data.service";
 import {map, startWith} from "rxjs/operators";
 import {FavoriteItemType} from "../../../core/favorites/favorite-item-type.enum";
+import {OrdersDataService} from "../../../core/orders/orders-data.service";
 
 @Component({
     selector: 'st-favorites',
@@ -14,6 +15,7 @@ import {FavoriteItemType} from "../../../core/favorites/favorite-item-type.enum"
 export class FavoritesComponent {
     readonly favoriteItemType = FavoriteItemType;
     readonly patientDisplayedColumns: string[] = ['fullName', 'birthDate', 'code', 'defaultId', 'removeFromFavorites'];
+    readonly ordersDisplayedColumns: string[] = ['orderName', 'creator', 'patient', 'isFavorite'];
     readonly patientsList$ = combineLatest([
         this.patientsDataService.getPatients(),
         this.favoritesService.favoritesChanged.pipe(startWith(FavoriteItemType.Patient))
@@ -24,8 +26,19 @@ export class FavoritesComponent {
         }))
     }));
 
+    readonly ordersList$ = combineLatest([
+        this.ordersDataService.getOrders(),
+        this.favoritesService.favoritesChanged.pipe(startWith(FavoriteItemType.Patient))
+    ]).pipe(map(([ordersList, favoritesType]) => {
+        return ordersList.filter(patient => this.favoritesService.isFavorite({
+            id: patient.orderName,
+            type: FavoriteItemType.Order
+        }))
+    }));
+
     constructor(private readonly favoritesService: FavoritesService,
-                private readonly patientsDataService: PatientsDataService) {
+                private readonly patientsDataService: PatientsDataService,
+                private readonly ordersDataService: OrdersDataService) {
     }
 
     removeFromFavorites(itemId: string, itemType: FavoriteItemType) {
